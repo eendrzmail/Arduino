@@ -1,0 +1,52 @@
+#connection{
+    display:block;
+    position: absolute;
+    min-width:300px;
+    min-height:300px;
+    z-index: 90;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: rgba(7, 7, 7, 0.74);
+    border-radius: 5%;
+    border: 2px solid black;
+    animation: conn-hide .7s 1s both;
+    animation-play-state: paused;
+}
+.plug {
+    fill:none;
+    stroke:rgb(85, 13, 13);
+    stroke-width: 10;
+    stroke-dasharray: 400, 0;
+    stroke-dashoffset: 0;
+    transition-duration:1s;
+    animation: plug-anim 1s both paused;
+   }
+
+@keyframes plug-anim{
+    0%{
+
+    }
+    50%{
+        stroke: rebeccapurple;
+        stroke-dasharray: 25, 60;
+        stroke-dashoffset: 38;
+    }
+    100%{
+        stroke: rgb(19, 138, 3);
+        stroke-dasharray: 800, 0;
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes conn-hide{
+    to{
+        transform: translate(0,0);
+        min-width:30px;
+        min-height:30px;
+        width:40px;
+        height: 40px;
+        left:0;
+        top:0;
+    }
+}
