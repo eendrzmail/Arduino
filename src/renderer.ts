@@ -28,7 +28,7 @@ function getPorts() {
                                 // Close teporary connection and run port listener
                                 temp.close();
                                 this.hide();
-                                setTimeout( () => this.listen(element.path) , 50 );
+                                setTimeout( () => this.listen(element.path) , 200 );
                             }
                         })
                     })
